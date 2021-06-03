@@ -18,7 +18,9 @@ Alert configuration structure
 
 
 http://localhost:8080/swagger-ui.html#/
+
 POST /rest/api/v1/alerts/{companyId}/configurations
+
 {
 "name":"test",
    "company": {
