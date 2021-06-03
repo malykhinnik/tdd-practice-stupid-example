@@ -14,3 +14,32 @@ Alert configuration structure
   conditions for column. Columns can be textual and numeric.
     Textual columns can be filtered by equals, not equals, contains, in list (comma separated)
     Numeric columns can be filtered by more than, less than, equals, not equals, in list (comma separated)
+
+
+
+http://localhost:8080/swagger-ui.html#/
+POST /rest/api/v1/alerts/{companyId}/configurations
+{
+"name":"test",
+   "company": {
+    "id": 1
+  },
+  "notificationTypes": [
+    {
+      "name": "SYSTEM"
+    }
+  ],
+  "conditions": [
+    {
+      "conditions": {
+        "name": "EQUALS"
+      },
+      "field": {
+        "name": "ID"
+      },
+      "fieldValues": [
+        "1"
+      ]
+    }
+  ]
+}
