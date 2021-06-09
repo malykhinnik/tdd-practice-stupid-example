@@ -18,9 +18,24 @@ public class ContentControllerTest {
 	private MockMvc mvc;
 
 	@Test
+	public void create() {
+		// TODOD
+	}
+
+	@Test
 	public void getContent() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.get("/contents/1").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk()).andExpect(jsonPath("$.id").value("1"))
 				.andExpect(jsonPath("$.content").value("content"));
+	}
+
+	@Test
+	public void update() {
+		// TODOD
+	}
+
+	@Test
+	public void delete() {
+		// TODOD
 	}
 }
